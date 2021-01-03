@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+<ion-title>Bac calculator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+
+</ion-header>
+
+  <ion-item>
+    <ion-label>Examen National</ion-label>
+    <ion-input type="number" placeholder="Entrer la note Examen National" [(ngModel)]="en"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Examen Regional</ion-label>
+    <ion-input type="number" placeholder="Entrer la note Examen Regional " [(ngModel)]="er"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Controle continue</ion-label>
+    <ion-input type="number" placeholder="Entrer Controle continue" [(ngModel)]="cc"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="calcule()" color="primary">Calcule</ion-button>
+
+  <ion-item>
+    <ion-label></ion-label>
+    
+    <ion-textarea readonly>Ton Resultat est : {{finaleResult}}</ion-textarea> 
+  </ion-item>
+
+</ion-content>
